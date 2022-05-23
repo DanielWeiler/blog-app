@@ -22,10 +22,10 @@
     "lodash": "^4.17.21",
     "mongoose": "^5.13.2",
     "mongoose-unique-validator": "^2.0.3",
-    "package.json": "^2.0.1"
+    "package.json": "^2.0.1",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "nodemon": "^2.0.10",
