@@ -3,6 +3,7 @@ const express = require('express')
 require('express-async-errors')
 const app = express()
 const cors = require('cors')
+const path = require('path')
 const blogsRouter = require('./controllers/blogs')
 const usersRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
@@ -29,6 +30,11 @@ app.use(middleware.tokenExtractor)
 app.use('/api/blogs', middleware.userExtractor, blogsRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
+
+// Solves the issue of individual routes like /blog/<id number> not working after deployment
+app.get('*', (_, response) => 
+  response.sendFile(path.resolve('build', 'index.html'))
+)
 
 if (process.env.NODE_ENV === 'test') {
   const testingRouter = require('./controllers/testing')
