@@ -6,7 +6,7 @@ This blog app is a fullstack web app that I have built while learning fullstack 
 
 ## Demo
 
-A working live version can be found at [blog-app-1234.herokuapp.com](https://blog-app-1234.herokuapp.com/)
+A working live version can be found at [blog-app-1234.herokuapp.com](https://blog-app-1234.herokuapp.com/) (Currently unavailable)
 
 One can sign in with a test account that has already been created:
 - username: Tester
